@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaLaravel } from "react-icons/fa";
-import { useGlobalContext } from "./context";
+import { useGlobalContext } from "../context";
 
 const Submenu = () => {
   const {

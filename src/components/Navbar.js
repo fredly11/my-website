@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "./images/logo.png";
+import logo from ".././images/logo.png";
 import { FaBars } from "react-icons/fa";
-import { useGlobalContext } from "./context";
+import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { openSidebar, openSubmenu, closeSubmenu } = useGlobalContext();
@@ -28,22 +29,43 @@ const Navbar = () => {
         </div>
         <ul className="nav-links">
           <li>
-            <button className="link-btn" onMouseOver={displaySubmenu}>
+            <Link to="/" className="link-btn">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/skills"
+              className="link-btn"
+              onMouseOver={displaySubmenu}
+            >
               skills
-            </button>
+            </Link>
           </li>
           <li>
-            <button className="link-btn" onMouseOver={displaySubmenu}>
+            <Link
+              to="/portfolio"
+              className="link-btn"
+              onMouseOver={displaySubmenu}
+            >
               portfolio
-            </button>
+            </Link>
           </li>
           <li>
-            <button className="link-btn" onMouseOver={displaySubmenu}>
-              about me
-            </button>
+            <Link to="/about" className="link-btn" onMouseOver={displaySubmenu}>
+              about
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className="link-btn"
+              onMouseOver={displaySubmenu}
+            >
+              contact
+            </Link>
           </li>
         </ul>
-        <button className="btn signin-btn">Sign in</button>
       </div>
     </nav>
   );

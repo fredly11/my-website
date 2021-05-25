@@ -23,6 +23,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="nav-logo" alt="" />
+          <h2 className="nav-init">WB</h2>
           <button className="btn toggle-btn" onClick={openSidebar}>
             <FaBars />
           </button>

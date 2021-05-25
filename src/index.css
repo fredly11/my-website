@@ -158,12 +158,75 @@ p {
 Styles
 ===============
 */
+
+.about::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 0;
+  background: #d6eaec;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.about-title {
+  margin-top: 4rem;
+  text-align: center;
+}
+.about-underline {
+  width: 30%;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  margin-top: 1.25rem;
+  background: var(--clr-grey-2);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-subtitle {
+  margin-top: 4rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-info {
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+  column-gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60rem;
+}
+
+.about-photo {
+  max-width: 25rem;
+  max-height: 30rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: var(--radius);
+  position: relative;
+  border: solid var(--clr-grey-1);
+}
+
+.about-info p {
+  font-size: larger;
+  margin-left: 1rem;
+  padding: 2rem;
+}
+
 .nav {
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(224, 224, 224);
+  background: rgb(238, 238, 238);
   position: relative;
   z-index: 1;
 }
@@ -192,6 +255,10 @@ Styles
 .nav-links {
   display: none;
 }
+.nav-init {
+  margin-top: 0.6rem;
+  margin-left: 1rem;
+}
 
 .hero::before {
   content: "";
@@ -200,7 +267,7 @@ Styles
   height: 100%;
   top: 0;
   left: 0;
-  background: #75b8c0;
+  background: #d6eaec;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
@@ -231,6 +298,9 @@ Styles
 .home-img {
   display: none;
 }
+.hero h1 {
+  text-align: center;
+}
 
 /* nav media query */
 @media screen and (min-width: 800px) {
@@ -246,6 +316,7 @@ Styles
     display: inline-block;
   }
   .nav-links {
+    margin-top: 1.7rem;
     display: block;
     justify-self: center;
     display: grid;
@@ -260,8 +331,7 @@ Styles
   }
   .link-btn {
     height: 100%;
-    border: solid #75b8c0;
-    border-radius: 4px;
+    border-bottom: solid #75b8c0;
     padding: 4px;
     font-size: 1.1rem;
     color: var(--clr-grey-1);

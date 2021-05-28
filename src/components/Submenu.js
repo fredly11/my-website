@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useGlobalContext } from "../context";
-
+import { HashLink } from "react-router-hash-link";
 const Submenu = () => {
   const {
     isSubmenuOpen,
@@ -37,10 +37,14 @@ const Submenu = () => {
         {links.map((link, index) => {
           const { label, icon, url } = link;
           return (
-            <a key={index} href={url}>
+            <HashLink smooth to={url}>
               {icon}
               {label}
-            </a>
+            </HashLink>
+            // <a key={index} href={url}>
+            //   {icon}
+            //   {label}
+            // </a>
           );
         })}
       </div>

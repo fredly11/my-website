@@ -163,7 +163,7 @@ Styles
   content: "";
   position: absolute;
   width: 200%;
-  height: 200%;
+  height: 220%;
   top: 0;
   left: 0;
   background: #d6eaec;
@@ -219,6 +219,54 @@ Styles
   font-size: larger;
   margin-left: 1rem;
   padding: 2rem;
+}
+@media screen and (max-width: 800px) {
+  .about-info {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .about::before {
+    width: 250%;
+    height: 250%;
+  }
+}
+
+.skills-p {
+  padding: 20px;
+  font-size: 14pt;
+}
+.skills-card {
+  text-align: center;
+  width: 40rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f1f8f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card {
+  text-align: center;
+  width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f1f8f9;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.video-container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  padding: 20px;
+  width: 40rem;
+}
+
+.skills-title {
+  margin-top: 30px;
 }
 
 .nav {

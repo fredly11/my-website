@@ -10,7 +10,7 @@ const About = () => {
         <h1>About Me</h1>
         <div className="about-underline"></div>
       </div>
-      <div className="about-subtitle">
+      <div className="about-subtitle" id="family">
         <h2>My Family</h2>
       </div>
       <div className="about-info">
@@ -19,8 +19,9 @@ const About = () => {
           Mipha. We've been married for about 5 years. Natasha is a full-time
           comic artist and author of the comic Pot of Gold on Webtoon. <br />
           <br />
-          Together we love watching movies and shows and playing Dungeon's and
-          Dragons. We also enjoy fencing and spending time with our friends.
+          Together we love watching movies and shows as well as playing
+          Dungeon's and Dragons. We also enjoy fencing and spending time with
+          our friends.
           <br />
           <br />
           Mipha's favorite hobbies are catching an old lanyard as I fling it
@@ -29,7 +30,7 @@ const About = () => {
         <img src={corwyn} alt="" className="about-photo" />
       </div>
       <div className="underline"></div>
-      <div className="about-subtitle">
+      <div className="about-subtitle" id="hobbies">
         <h2>My Hobbies</h2>
       </div>
       <div className="about-info">

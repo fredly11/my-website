@@ -20,7 +20,7 @@ const sublinks = [
     links: [
       { label: "web design", icon: <FaEdge />, url: "/skills#web" },
       {
-        label: "single page applications",
+        label: "single-page applications",
         icon: <FaDiscord />,
         url: "/skills#single",
       },

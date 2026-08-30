@@ -8,6 +8,14 @@ import {
   profile,
   projects,
 } from "../content";
+import headshot from "../images/me.jpg";
+import awsCcp from "../images/aws-ccp.png";
+import comptiaAPlus from "../images/comptia-a-plus.png";
+
+const badges = {
+  "aws-ccp": awsCcp,
+  "comptia-a-plus": comptiaAPlus,
+};
 
 export default function Home() {
   useDocumentTitle("William Buechele | Technical Support Engineer");
@@ -15,34 +23,46 @@ export default function Home() {
   return (
     <>
       <section className="hero page-block">
-        <p className="eyebrow">
-          {profile.location} · {profile.citizenship}
-        </p>
-        <h1>{profile.name}</h1>
-        <p className="hero-headline">{profile.headline}</p>
-        <p className="lede">{profile.pitch}</p>
-        <div className="cta-row">
-          <Link className="btn" to="/contact">
-            Contact me
-          </Link>
-          <a
-            className="btn btn-ghost"
-            href={profile.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaGithub aria-hidden="true" />
-            GitHub
-          </a>
-          <a
-            className="btn btn-ghost"
-            href={profile.linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FaLinkedin aria-hidden="true" />
-            LinkedIn
-          </a>
+        <div className="hero-grid">
+          <div className="hero-copy">
+            <p className="eyebrow">
+              {profile.location} · {profile.citizenship}
+            </p>
+            <h1>{profile.name}</h1>
+            <p className="hero-headline">{profile.headline}</p>
+            <p className="lede">{profile.pitch}</p>
+            <div className="cta-row">
+              <Link className="btn" to="/contact">
+                Contact me
+              </Link>
+              <a
+                className="btn btn-ghost"
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub aria-hidden="true" />
+                GitHub
+              </a>
+              <a
+                className="btn btn-ghost"
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin aria-hidden="true" />
+                LinkedIn
+              </a>
+            </div>
+          </div>
+          <figure className="hero-photo">
+            <img
+              src={headshot}
+              alt="William Buechele, smiling in a white dress shirt and glasses"
+              width="900"
+              height="1092"
+            />
+          </figure>
         </div>
       </section>
 
@@ -53,7 +73,7 @@ export default function Home() {
             All projects
           </Link>
         </div>
-        <div className="card-grid">
+        <div className="card-grid featured-grid">
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} compact />
           ))}
@@ -70,6 +90,15 @@ export default function Home() {
         <ul className="cert-strip">
           {certifications.map((cert) => (
             <li key={cert.name} className="info-card">
+              {cert.badge && badges[cert.badge] ? (
+                <img
+                  className="cert-badge"
+                  src={badges[cert.badge]}
+                  alt=""
+                  width="80"
+                  height="80"
+                />
+              ) : null}
               <p className="info-kicker">{cert.status}</p>
               <h3>{cert.name}</h3>
               <p>{cert.earned ?? "Not earned yet"}</p>

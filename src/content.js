@@ -120,6 +120,7 @@ export const certifications = [
     status: "Earned",
     detail:
       "Hardware, operating systems, networking, and troubleshooting fundamentals.",
+    badge: "comptia-a-plus",
   },
   {
     name: "AWS Certified Cloud Practitioner",
@@ -127,6 +128,7 @@ export const certifications = [
     status: "Earned",
     detail:
       "AWS cloud concepts, security, billing, and support. Current credential I lead with.",
+    badge: "aws-ccp",
   },
   {
     name: "AWS Solutions Architect Associate",

@@ -5,6 +5,13 @@ import {
   experience,
   languages,
 } from "../content";
+import awsCcp from "../images/aws-ccp.png";
+import comptiaAPlus from "../images/comptia-a-plus.png";
+
+const badges = {
+  "aws-ccp": awsCcp,
+  "comptia-a-plus": comptiaAPlus,
+};
 
 export default function Experience() {
   useDocumentTitle("Certifications & Experience | William Buechele");
@@ -42,6 +49,15 @@ export default function Experience() {
       <div className="card-grid">
         {certifications.map((cert) => (
           <article key={cert.name} className="info-card">
+            {cert.badge && badges[cert.badge] ? (
+              <img
+                className="cert-badge"
+                src={badges[cert.badge]}
+                alt=""
+                width="80"
+                height="80"
+              />
+            ) : null}
             <p className="info-kicker">{cert.status}</p>
             <h3>{cert.name}</h3>
             <p>{cert.earned ?? "In progress — not earned"}</p>

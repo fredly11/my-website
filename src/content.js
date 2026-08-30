@@ -73,9 +73,9 @@ export const projects = [
     featured: true,
     name: "TaskTest",
     subtitle: "Multi-tenant SaaS task app",
-    role: "Portfolio project",
+    role: "Repo-first portfolio project",
     summary:
-      "A multi-tenant task app on AWS: React (Vite) frontend with Cognito, API Gateway, Lambda, DynamoDB, S3, and CloudFront. The backend was assembled in the AWS console and is not in the GitHub repo.",
+      "Architecture and React (Vite) frontend for a multi-tenant task app on AWS: Cognito, API Gateway, Lambda, DynamoDB, S3, and CloudFront. The backend was assembled in the AWS console and is not in the GitHub repo. There is no live demo — the hosted stack was taken offline on purpose to avoid AWS spend.",
     stack: [
       "React",
       "Cognito",
